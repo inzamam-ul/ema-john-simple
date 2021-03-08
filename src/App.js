@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./component/Header/Header";
+import Shop from "./component/Shop/Shop";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Review from "./component/Review/Review";
+import Error from "./component/Error/Error";
+import Inventory from "./component/Inventory/Inventory";
+import ProductDetails from "./component/ProductDetails/ProductDetails";
 
 function App() {
+  document.title = "ema-john-simple";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+
+        <Switch>
+          <Route exact path="/">
+            <Shop />
+          </Route>
+          <Route path="/shop">
+            <Shop />
+          </Route>
+          <Route path="/review">
+            <Review />
+          </Route>
+          <Route path="/inventory">
+            <Inventory />
+          </Route>
+          <Route path="/product/:key">
+            <ProductDetails />
+          </Route>
+          <Route path="*">
+            <Error />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

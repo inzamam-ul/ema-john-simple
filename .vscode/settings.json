@@ -1,0 +1,8 @@
+{
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "autoimport.showNotifications": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "bottom",
+    "vsicons.projectDetection.autoReload": true,
+    "search.quickOpen.includeSymbols": true
+}
