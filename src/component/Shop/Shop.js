@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Shop.css";
 import fakeData from "../../fakeData";
 import Product from "../Product/Product";
@@ -9,7 +9,10 @@ import { Link } from "react-router-dom";
 
 const Shop = () => {
   const first10 = fakeData.slice(0, 10);
-  const [products, setproduct] = useState(first10); //setProduct state
+  const [products, setproduct] = useState([]); //setProduct state
+  useEffect(() => {
+    setproduct(first10);
+  }, [first10]);
 
   const stringCart = localStorage.getItem("cart"); //getting cart data from local storage
   let parsedCart;
