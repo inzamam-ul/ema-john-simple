@@ -3,7 +3,19 @@
   text-align: left !important;
   border-right: 1px solid gray;
 }
+.shop-container {
+  display: flex;
+  flex-direction: row;
+}
 /* .cart {
   text-align: left !important;
   padding-left: 10px !important;
 } */
+@media (max-width: 1040px) {
+  .shop {
+    padding-left: 10px !important;
+  }
+  .shop-container {
+    flex-direction: column-reverse;
+  }
+}

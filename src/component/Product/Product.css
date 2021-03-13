@@ -4,3 +4,9 @@ h6 {
 .single-pd {
   border-bottom: 1px solid gray;
 }
+@media (max-width: 1040px) {
+  .single-pd {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}

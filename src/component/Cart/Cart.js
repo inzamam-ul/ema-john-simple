@@ -32,16 +32,18 @@ const Cart = (props) => {
   const grandTotal = total + shiping;
   const vat = grandTotal / 10;
   return (
-    <div className="cart-inner">
+    <div className="cart-inner sticky-top">
       <h4>Order Summary</h4>
       <h6>Items added: {cart.reduce((total, prd) => total + prd.count, 0)}</h6>
-      <div className="calulation">
-        <p>Product price: ${formatNumber(total)}</p>
-        <p>Shiping: ${formatNumber(shiping)}</p>
-        <p>VAT+Tax: ${formatNumber(vat)}</p>
-        <h5>Total: ${formatNumber(grandTotal + vat)}</h5>
+      <div className="d-flex-y cart-content">
+        <div className="calulation">
+          <p>Product price: ${formatNumber(total)}</p>
+          <p>Shiping: ${formatNumber(shiping)}</p>
+          <p>VAT+Tax: ${formatNumber(vat)}</p>
+          <h5>Total: ${formatNumber(grandTotal + vat)}</h5>
+        </div>
+        {props.children}
       </div>
-      {props.children}
     </div>
   );
 };

@@ -5,3 +5,16 @@
 .calulation h5 {
   color: red;
 }
+@media (max-width: 1040px) {
+  .cart-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .cart-inner {
+    background-color: rgba(128, 128, 128, 0.671);
+    padding: 10px;
+    border-radius: 5px;
+  }
+}

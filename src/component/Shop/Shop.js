@@ -43,8 +43,8 @@ const Shop = () => {
 
   return (
     <section className="container-fluid">
-      <div className="row mt-2">
-        <div className="shop col-md-10">
+      <div className="row shop-container mt-2">
+        <div className="shop col-lg-10">
           {products.map((product) => {
             return (
               <Product
@@ -56,7 +56,7 @@ const Shop = () => {
             );
           })}
         </div>
-        <div className="cart col-md-2">
+        <div className="cart col-lg-2">
           <Cart>
             <Link to="/review">
               <button className="btn btn-warning mt-2 px-5 fw-bold">
