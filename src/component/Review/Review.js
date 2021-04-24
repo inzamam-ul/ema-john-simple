@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import Cart from "../Cart/Cart";
 import ReviewProduct from "../ReviewProduct/ReviewProduct";
 import happyImg from "../../images/giphy.gif";
+import { useHistory } from "react-router";
 
 const Review = () => {
+  const history = useHistory();
+
+  //cart
   let stringCart = localStorage.getItem("cart");
   let cart;
 
@@ -24,9 +28,10 @@ const Review = () => {
   const [orderPlace, setOrderPlace] = useState(false);
 
   const placeOrder = () => {
-    setNewCart([]);
-    localStorage.clear("cart");
-    setOrderPlace(true);
+    history.push("/shipment");
+    // setNewCart([]);
+    // localStorage.clear("cart");
+    // setOrderPlace(true);
   };
 
   let orderPlaced;

@@ -12,7 +12,7 @@ const Shop = () => {
   const [products, setproduct] = useState([]); //setProduct state
   useEffect(() => {
     setproduct(first10);
-  }, [first10]);
+  }, []);
 
   const stringCart = localStorage.getItem("cart"); //getting cart data from local storage
   let parsedCart;
